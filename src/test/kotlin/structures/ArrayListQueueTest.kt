@@ -3,11 +3,10 @@ package structures
 import org.junit.Test
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeEach
-import java.lang.IllegalStateException
 
 internal class ArrayListQueueTest {
 
-    private val queue : Queue<Int> = Queue.ArrayListQueue()
+    private val queue: Queue<Int> = Queue.ArrayListQueue()
 
     @BeforeEach
     fun clear() = queue.clear()

@@ -3,7 +3,7 @@ package other
 /**
  * Algorithm for checking a string for a palindrome
  *
-*/
+ */
 
 class Palindrome(private val text: String) {
 

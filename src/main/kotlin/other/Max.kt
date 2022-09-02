@@ -1,7 +1,5 @@
 package other
 
-import java.lang.IllegalArgumentException
-
 /**
  * Algorithm for finding the maximum value from a list
  *
@@ -13,7 +11,7 @@ class Max<T : Comparable<T>> {
      *
      * @return returns the maximum element from the list
      */
-    fun compute(items: List<T>) : T {
+    fun compute(items: List<T>): T {
         if (items.isEmpty()) {
             throw IllegalArgumentException("items is empty!")
         }
@@ -30,7 +28,7 @@ class Max<T : Comparable<T>> {
      *
      * @return returns the maximum element from the list recursively
      */
-    fun computeRecursive(items: List<T>) : T {
+    fun computeRecursive(items: List<T>): T {
         if (items.size == 1) {
             return items.first()
         }

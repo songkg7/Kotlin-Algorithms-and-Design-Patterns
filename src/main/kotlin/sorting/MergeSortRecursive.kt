@@ -33,13 +33,15 @@ fun Array<Int>.mergeSortRecursive() {
     left.mergeSortRecursive()
     right.mergeSortRecursive()
 
-    var i = 0; var j = 0; var k = 0
+    var i = 0;
+    var j = 0;
+    var k = 0
 
     val leftSize = left.size
     val rightSize = right.size
 
     while (i < leftSize && j < rightSize) {
-        if (left[i]  <= right[j]) {
+        if (left[i] <= right[j]) {
             array[k++] = left[i++]
         } else {
             array[k++] = right[j++]
@@ -77,13 +79,15 @@ fun MutableList<Int>.mergeSortRecursive() {
     left.mergeSortRecursive()
     right.mergeSortRecursive()
 
-    var i = 0; var j = 0; var k = 0
+    var i = 0;
+    var j = 0;
+    var k = 0
 
     val leftSize = left.size
     val rightSize = right.size
 
     while (i < leftSize && j < rightSize) {
-        if (left[i]  <= right[j]) {
+        if (left[i] <= right[j]) {
             list[k++] = left[i++]
         } else {
             list[k++] = right[j++]

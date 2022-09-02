@@ -14,7 +14,7 @@ class LevenshteinLength {
      *
      * @return returns the Levenshtein distance for two strings
      */
-    fun compute(str1: String, str2: String) : Int {
+    fun compute(str1: String, str2: String): Int {
         val matrix = Array(str1.length + 1) {
             Array(str2.length + 1) { 0 }
         }
@@ -32,7 +32,8 @@ class LevenshteinLength {
                 if (str1[i - 1] == str2[j - 1]) {
                     matrix[i][j] = matrix[i - 1][j - 1]
                 } else {
-                    matrix[i][j] = min(min(matrix[i - 1][j], matrix[i][j - 1]), matrix[i - 1][j - 1]) + 1
+                    matrix[i][j] =
+                        min(min(matrix[i - 1][j], matrix[i][j - 1]), matrix[i - 1][j - 1]) + 1
                 }
             }
         }

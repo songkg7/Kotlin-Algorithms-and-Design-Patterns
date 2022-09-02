@@ -1,7 +1,5 @@
 package design_patterns
 
-import java.util.*
-
 /**
  *
  * An abstract factory is a generative design pattern that allows
@@ -27,16 +25,16 @@ class AndroidText : Text
 class IOSText : Text
 
 interface ButtonFactory {
-    fun createButton() : Button
-    fun createText() : Text
+    fun createButton(): Button
+    fun createText(): Text
 }
 
 class AndroidButtonFactory : ButtonFactory {
-    override fun createButton() : Button = AndroidButton()
+    override fun createButton(): Button = AndroidButton()
     override fun createText(): Text = AndroidText()
 }
 
 class IOSButtonFactory : ButtonFactory {
-    override fun createButton() : Button = IOSButton()
+    override fun createButton(): Button = IOSButton()
     override fun createText(): Text = IOSText()
 }

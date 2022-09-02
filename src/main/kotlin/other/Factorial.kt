@@ -13,14 +13,14 @@ class Factorial {
      *
      * @return returns the factorial of a number by an iterative method
      */
-    fun compute(number: Int) : Int {
+    fun compute(number: Int): Int {
         if (number <= 1) {
             return 1
         }
 
         var result = 1
         for (i in 2..number) {
-           result *= i
+            result *= i
         }
         return result
     }
@@ -31,7 +31,7 @@ class Factorial {
      *
      * @return returns factorial recursively
      */
-    fun computeRecursive(number: Int) : Int {
+    fun computeRecursive(number: Int): Int {
         return if (number <= 1) {
             1
         } else {
@@ -43,7 +43,7 @@ class Factorial {
      * @see <a href="https://kotlinlang.org/docs/functions.html#tail-recursive-functions">tailrec functions</a>
      *
      */
-    tailrec fun computeRecursiveWithKotlinOptimization(number: Int) : Int =
+    tailrec fun computeRecursiveWithKotlinOptimization(number: Int): Int =
         if (number <= 1) 1 else number * computeRecursiveWithKotlinOptimization(number - 1)
 
 }

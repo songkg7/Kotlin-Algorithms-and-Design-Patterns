@@ -35,7 +35,7 @@ class BinaryTree {
      * @param value - element value
      */
     fun add(value: Int) {
-        fun addRec(current: Node?, value: Int) : Node {
+        fun addRec(current: Node?, value: Int): Node {
             if (current == null) {
                 return Node(value)
             }
@@ -63,11 +63,11 @@ class BinaryTree {
      * @param value - the value of the element to be removed
      */
     fun remove(value: Int) {
-        fun smallestValue(root: Node) : Int {
+        fun smallestValue(root: Node): Int {
             return if (root.leftNode() == null) root.value() else smallestValue(root.leftNode()!!)
         }
 
-        fun removeRec(current: Node?, value: Int) : Node? {
+        fun removeRec(current: Node?, value: Int): Node? {
             if (current == null) {
                 return null
             }
@@ -108,8 +108,8 @@ class BinaryTree {
      *
      * @return - returns true if the element exists
      */
-    fun contains(value: Int) : Boolean {
-        fun containsRec(current: Node?, value: Int) : Boolean {
+    fun contains(value: Int): Boolean {
+        fun containsRec(current: Node?, value: Int): Boolean {
             if (current == null) {
                 return false
             }
@@ -133,7 +133,7 @@ class BinaryTree {
      *
      * @return returns the elements of the tree
      */
-    fun traverseInOrder() : List<Int> {
+    fun traverseInOrder(): List<Int> {
         fun traverseInOrderRec(node: Node?, nodes: MutableList<Int>) {
             if (node != null) {
                 traverseInOrderRec(node.leftNode(), nodes)
@@ -154,7 +154,7 @@ class BinaryTree {
      *
      * @return returns the elements of the tree
      */
-    fun traversePreOrder() : List<Int> {
+    fun traversePreOrder(): List<Int> {
         fun traversePreOrderRec(node: Node?, nodes: MutableList<Int>) {
             if (node != null) {
                 nodes.add(node.value())
@@ -175,7 +175,7 @@ class BinaryTree {
      *
      * @return returns the elements of the tree
      */
-    fun traversePostOrder() : List<Int> {
+    fun traversePostOrder(): List<Int> {
         fun traversePostOrderRec(node: Node?, nodes: MutableList<Int>) {
             if (node != null) {
                 traversePostOrderRec(node.leftNode(), nodes)
@@ -197,7 +197,7 @@ class BinaryTree {
      *
      * @return returns the elements of the tree
      */
-    fun traverseLevelOrder() : List<Int> {
+    fun traverseLevelOrder(): List<Int> {
         val root = this.root ?: return listOf()
 
         val queue = java.util.LinkedList<Node>()

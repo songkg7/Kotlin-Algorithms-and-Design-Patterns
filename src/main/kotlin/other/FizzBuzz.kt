@@ -17,7 +17,7 @@ class FizzBuzz {
      *
      * @return returns Fizz, Buzz, FizzBuzz or number
      */
-    fun compute(number: Int) : String {
+    fun compute(number: Int): String {
         return when {
             number % 3 == 0 && number % 5 == 0 -> "FizzBuzz"
             number % 3 == 0 -> "Fizz"

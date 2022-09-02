@@ -1,6 +1,5 @@
 package structures
 
-
 /**
  * data structure: min-heap
  *
@@ -56,7 +55,7 @@ class MinHeap(maxSize: Int) {
         }
     }
 
-    fun popMin() : Int {
+    fun popMin(): Int {
         if (size == 1) {
             return heap[--size]
         }

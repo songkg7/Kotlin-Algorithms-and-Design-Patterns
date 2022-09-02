@@ -39,7 +39,7 @@ fun Array<Int>.timSort() {
     }
 }
 
-private fun minrun(n: Int) : Int {
+private fun minrun(n: Int): Int {
     var addedValue = 0
     var size = n
     if (size >= 64) {

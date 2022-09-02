@@ -12,7 +12,7 @@ class Swap {
      *
      * @return returns true if the element is accessible by index
      */
-    private fun  List<Int>.inIndex(index: Int) = index in 0 until size
+    private fun List<Int>.inIndex(index: Int) = index in 0 until size
 
     /**
      * Kotlin Extension to check array index for correctness

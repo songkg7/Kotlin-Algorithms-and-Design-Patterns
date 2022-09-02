@@ -10,7 +10,6 @@ package sorting
  * amount of memory: 1
  */
 
-
 fun <T : Comparable<T>> Array<T>.bubbleSortImproved() {
     val array = this
     var isSorted = true

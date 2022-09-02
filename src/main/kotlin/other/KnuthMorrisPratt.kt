@@ -11,7 +11,7 @@ class KnuthMorrisPratt {
      *
      * @return returns an array of prefix functions for a string
      */
-    private fun prefixFunction(str: String) : Array<Int> {
+    private fun prefixFunction(str: String): Array<Int> {
         val pi = Array(str.length) { 0 }
         for (index in 1 until str.length) {
             var k = pi[index - 1]
@@ -30,7 +30,7 @@ class KnuthMorrisPratt {
      *
      * @return returns true if the substring is in the string
      */
-    fun contains(sub: String, str: String) : Boolean {
+    fun contains(sub: String, str: String): Boolean {
         val summary = "$sub#$str"
         val pi = prefixFunction(summary)
         return pi.any { value -> value == sub.length }
@@ -40,7 +40,7 @@ class KnuthMorrisPratt {
      *
      * @return returns the number of occurrences of a substring in a string
      */
-    fun count(sub: String, str: String) : Int {
+    fun count(sub: String, str: String): Int {
         val summary = "$sub#$str"
         return prefixFunction(summary).count { value -> value == sub.length }
     }

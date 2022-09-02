@@ -9,7 +9,7 @@ package design_patterns
  */
 
 interface ArithmeticCommand {
-    fun execute(number: Int) : Int
+    fun execute(number: Int): Int
 }
 
 class AddCommand(private val addendum: Int) : ArithmeticCommand {

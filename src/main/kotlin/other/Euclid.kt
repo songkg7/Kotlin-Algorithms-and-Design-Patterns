@@ -12,7 +12,7 @@ class Euclid {
      *
      * @return returns the greatest common divisor
      */
-    fun compute(num1: Int, num2: Int) : Int {
+    fun compute(num1: Int, num2: Int): Int {
         var copyNum1 = num1
         var copyNum2 = num2
         while (copyNum1 != 0 && copyNum2 != 0) {

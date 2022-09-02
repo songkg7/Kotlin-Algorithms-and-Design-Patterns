@@ -1,8 +1,5 @@
 package structures
 
-import java.lang.IllegalArgumentException
-import kotlin.collections.ArrayList
-
 /**
  * data structure: stack
  *
@@ -23,19 +20,19 @@ interface Stack<T> {
      * removes the element at the top of the stack and returns it
      *
      */
-    fun pop() : T
+    fun pop(): T
 
     /**
      * returns the element at the top of the stack without removing
      *
      */
-    fun peek() : T
+    fun peek(): T
 
     /**
      * returns true if the stack is empty
      *
      */
-    fun isEmpty() : Boolean
+    fun isEmpty(): Boolean
 
     /**
      * clears the stack
@@ -55,14 +52,14 @@ interface Stack<T> {
             data.add(item)
         }
 
-        override fun pop() : T {
+        override fun pop(): T {
             if (isEmpty()) {
                 throw IllegalArgumentException("Stack is empty!")
             }
             return data.removeLast()
         }
 
-        override fun peek() : T {
+        override fun peek(): T {
             if (isEmpty()) {
                 throw IllegalArgumentException("Stack is empty!")
             }

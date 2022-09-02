@@ -1,7 +1,7 @@
 package other
 
 import org.junit.Test
-import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Assertions.assertEquals
 
 internal class ReverseArrayTest {
 
@@ -16,7 +16,8 @@ internal class ReverseArrayTest {
     @Test
     fun test_strings() {
         val reverseArray = ReverseArray<String>()
-        val actual = reverseArray.compute(arrayOf("Twillight Sparkle", "Pinky Pie", "Apple Jack")).toList()
+        val actual =
+            reverseArray.compute(arrayOf("Twillight Sparkle", "Pinky Pie", "Apple Jack")).toList()
         val expected = arrayOf("Apple Jack", "Pinky Pie", "Twillight Sparkle").toList()
         assertEquals(expected, actual)
     }

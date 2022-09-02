@@ -1,8 +1,8 @@
 package sorting
 
+import TestUtils
 import org.junit.Test
 import org.junit.jupiter.api.Assertions
-import kotlin.random.Random
 
 internal class InsertionSortTest {
 

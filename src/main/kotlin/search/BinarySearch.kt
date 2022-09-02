@@ -18,7 +18,7 @@ class BinarySearch<T : Comparable<T>> : Search<T> {
      * @array - sorted array to be searched
      * @element - the element for which the left border is being searched
      */
-    fun leftBound(array: Array<T>, element: T) : Int {
+    fun leftBound(array: Array<T>, element: T): Int {
         var left = -1
         var right = array.size
         while ((right - left) > 1) {
@@ -38,7 +38,7 @@ class BinarySearch<T : Comparable<T>> : Search<T> {
      * @array - sorted array to be searched
      * @element - the element for which the right border is being searched
      */
-    fun rightBound(array: Array<T>, element: T) : Int {
+    fun rightBound(array: Array<T>, element: T): Int {
         var left = -1
         var right = array.size
         while ((right - left) > 1) {
@@ -72,7 +72,7 @@ class BinarySearch<T : Comparable<T>> : Search<T> {
      *
      * @return returns the index of the searched element or -1
      */
-    override fun search(array: Array<T>, element: T) : Int {
+    override fun search(array: Array<T>, element: T): Int {
         var left = 0
         var right = array.size - 1
         while (left <= right) {

@@ -9,7 +9,6 @@ package design_patterns
  *
  */
 
-
 /**
  * imitation of local data storage (database)
  *
@@ -39,9 +38,12 @@ class NetworkDataSource {
     )
 }
 
-class Repository(private val localSource: LocalDataSource, private val networkSource: NetworkDataSource) {
+class Repository(
+    private val localSource: LocalDataSource,
+    private val networkSource: NetworkDataSource
+) {
 
-    fun fetch() : List<String> {
+    fun fetch(): List<String> {
         // I omitted error handling for simplicity
         if (localSource.isEmpty()) {
             val data = networkSource.get()

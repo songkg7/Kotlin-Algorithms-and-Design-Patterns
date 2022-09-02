@@ -18,7 +18,7 @@ class FactorialWithCache {
      *
      * @return returns the factorial of a number
      */
-    fun compute(number: Int) : Int {
+    fun compute(number: Int): Int {
         if (number <= 1) {
             return 1
         }

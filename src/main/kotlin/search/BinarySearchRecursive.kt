@@ -7,7 +7,7 @@ package search
  * amount of memory: log(n) - recursion stack
  */
 
-class BinarySearchRecursive<T : Comparable<T>> : Search<T>  {
+class BinarySearchRecursive<T : Comparable<T>> : Search<T> {
 
     /**
      * проверяет присутствие элемента в массиве
@@ -39,7 +39,7 @@ class BinarySearchRecursive<T : Comparable<T>> : Search<T>  {
      * @right - правая граница
      * @element - искомый элемент
      */
-    private tailrec fun searchRecursive(array: Array<T>, left: Int, right: Int, element: T) : Int {
+    private tailrec fun searchRecursive(array: Array<T>, left: Int, right: Int, element: T): Int {
         if (left <= right) {
             val middle = left + (right - left) / 2
             if (array[middle] == element) {

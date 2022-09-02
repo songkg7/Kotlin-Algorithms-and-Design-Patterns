@@ -1,14 +1,14 @@
 package structures
 
 import org.junit.Test
-import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Assertions.assertEquals
 
 internal class MinHeapTest {
 
     @Test
     fun test_add() {
         val heap = MaxHeap(2)
-        
+
         assertEquals(true, heap.isEmpty())
 
         heap.add(2)

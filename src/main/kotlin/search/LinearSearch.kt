@@ -15,7 +15,7 @@ class LinearSearch<T : Comparable<T>> : Search<T> {
      * @array - sorted array
      * @element - search element
      */
-    override fun exists(array: Array<T>, element: T) : Boolean {
+    override fun exists(array: Array<T>, element: T): Boolean {
         return search(array, element) != -1
     }
 
@@ -25,7 +25,7 @@ class LinearSearch<T : Comparable<T>> : Search<T> {
      * @array - sorted array
      * @element - search element
      */
-    override fun search(array: Array<T>, element: T) : Int {
+    override fun search(array: Array<T>, element: T): Int {
         for (i in array.indices) {
             if (element == array[i]) {
                 return i

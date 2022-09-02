@@ -108,12 +108,17 @@ class FactorialAdvanced {
         return if (increment) div + signedNumber else div
     }
 
-    private fun listNumbers(numbers: List<BigInteger>, start: Int = 0, end: Int = numbers.size): BigInteger {
+    private fun listNumbers(
+        numbers: List<BigInteger>,
+        start: Int = 0,
+        end: Int = numbers.size
+    ): BigInteger {
         return when (end - start) {
             0 -> BigInteger.ONE
             1 -> numbers[start]
             2 -> numbers[start].multiply(numbers[start + 1])
             3 -> numbers[start].multiply(numbers[start + 1]).multiply(numbers[start + 2])
+
             else -> {
                 // Otherwise, split the list in half and recursively do this.
                 val m = end + start ushr 1

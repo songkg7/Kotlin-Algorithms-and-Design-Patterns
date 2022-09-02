@@ -1,6 +1,6 @@
 package structures
 
-import java.util.LinkedList
+import java.util.*
 
 /**
  * data structure: graph
@@ -71,7 +71,7 @@ class Graph<T> {
      *
      * @return returns all vertices of the graph
      */
-    fun depthFirstTraversal() : List<Vertex<T>> {
+    fun depthFirstTraversal(): List<Vertex<T>> {
         val visited = LinkedHashSet<Vertex<T>>()
         val queue = LinkedList<Vertex<T>>()
         queue.push(data.keys.first())
@@ -90,7 +90,7 @@ class Graph<T> {
      *
      * @return returns all vertices of the graph
      */
-    fun breadthFirstTraversal() : List<Vertex<T>> {
+    fun breadthFirstTraversal(): List<Vertex<T>> {
         val visited = LinkedHashSet<Vertex<T>>()
         val queue = LinkedList<Vertex<T>>()
         val firstVertex = data.keys.firstOrNull() ?: return listOf()

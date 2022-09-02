@@ -1,7 +1,5 @@
 package structures
 
-import kotlin.collections.ArrayList
-
 /**
  * data structure: queue
  *
@@ -24,34 +22,34 @@ interface Queue<T> {
      *
      * if the queue is empty, throws an IllegalStateException
      */
-    fun element() : T
+    fun element(): T
 
     /**
      * returns the element from the front of the queue
      *
      * if the queue is empty it will return null
      */
-    fun peek() : T?
+    fun peek(): T?
 
     /**
      * removes and returns an element from the front of the queue
      *
      * if the queue is empty, throws an IllegalStateException
      */
-    fun remove() : T
+    fun remove(): T
 
     /**
      * removes and returns an element from the front of the queue
      *
      * if the queue is empty it will return null
      */
-    fun poll() : T?
+    fun poll(): T?
 
     /**
      *
      * @return returns true if the queue is empty
      */
-    fun isEmpty() : Boolean
+    fun isEmpty(): Boolean
 
     /**
      * clears the queue
@@ -64,7 +62,7 @@ interface Queue<T> {
      *
      * @return returns true if the element was successfully removed
      */
-    fun remove(item: T) : Boolean
+    fun remove(item: T): Boolean
 
     /**
      * implementation using dynamic ArrayList
@@ -84,7 +82,7 @@ interface Queue<T> {
         override fun remove() = if (isEmpty()) thr("queue is empty!") else data.removeFirst()
         override fun poll() = if (isEmpty()) null else data.removeFirst()
 
-        override fun remove(item: T) : Boolean {
+        override fun remove(item: T): Boolean {
             return if (data.contains(item)) {
                 data.remove(item)
                 true
@@ -93,7 +91,7 @@ interface Queue<T> {
             }
         }
 
-        private fun thr(msg: String) : Nothing {
+        private fun thr(msg: String): Nothing {
             throw IllegalStateException(msg)
         }
     }
@@ -110,13 +108,13 @@ interface Queue<T> {
         override fun isEmpty() = data.isEmpty()
         override fun clear() = data.clear()
 
-        override fun element() : T = if (isEmpty()) thr("queue is empty!") else data.peekFirst()
+        override fun element(): T = if (isEmpty()) thr("queue is empty!") else data.peekFirst()
         override fun peek() = if (isEmpty()) null else data.peekFirst()
 
         override fun remove(): T = if (isEmpty()) thr("queue is empty!") else data.removeFirst()
         override fun poll() = if (isEmpty()) null else data.removeFirst()
 
-        override fun remove(item: T) : Boolean {
+        override fun remove(item: T): Boolean {
             return if (data.contains(item)) {
                 data.remove(item)
                 true
@@ -125,7 +123,7 @@ interface Queue<T> {
             }
         }
 
-        private fun thr(msg: String) : Nothing {
+        private fun thr(msg: String): Nothing {
             throw IllegalStateException(msg)
         }
     }

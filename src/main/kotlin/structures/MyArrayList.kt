@@ -1,7 +1,5 @@
 package structures
 
-import java.lang.IllegalStateException
-
 /**
  * data structure: simple java.util.ArrayList implementation
  *
@@ -42,7 +40,7 @@ class MyArrayList(private var capacity: Int = 10) {
      *
      * @param value - element
      */
-    fun remove(value: Int) : Boolean {
+    fun remove(value: Int): Boolean {
         val foundedIndex = data.indexOf(value)
         if (foundedIndex == -1) {
             return false
@@ -70,14 +68,13 @@ class MyArrayList(private var capacity: Int = 10) {
      *
      * @return returns true if the element was successfully modified
      */
-    fun set(index: Int, value: Int) : Boolean {
+    fun set(index: Int, value: Int): Boolean {
         if (isBound(index)) {
             data[index] = value
             return true
         }
         return false
     }
-
 
     /**
      * returns the value of the element by index, or throws an exception if the index is invalid
@@ -86,7 +83,7 @@ class MyArrayList(private var capacity: Int = 10) {
      *
      * @return returns the value of an element by index
      */
-    fun get(index: Int) : Int {
+    fun get(index: Int): Int {
         if (isBound(index)) {
             return data[index]
         } else {

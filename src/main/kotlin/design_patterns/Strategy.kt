@@ -8,7 +8,7 @@ package design_patterns
  */
 
 interface ExchangeStrategy {
-    fun into(price: Double) : Double
+    fun into(price: Double): Double
 
     class Dollar : ExchangeStrategy {
         override fun into(price: Double): Double {
@@ -24,7 +24,7 @@ interface ExchangeStrategy {
 }
 
 class RubleExchangeRate {
-    private var strategy : ExchangeStrategy = ExchangeStrategy.Dollar()
+    private var strategy: ExchangeStrategy = ExchangeStrategy.Dollar()
 
     fun changeStrategy(strategy: ExchangeStrategy) {
         this.strategy = strategy

@@ -14,7 +14,7 @@ class SieveOfEratosthenes {
      * @maxNumber - maximum value
      * @return - returns a list of prime numbers
      */
-    fun compute(maxNumber: Int) : List<Int> {
+    fun compute(maxNumber: Int): List<Int> {
         val numbers = Array(maxNumber + 1) { index -> index >= 2 }
 
         var x = 2

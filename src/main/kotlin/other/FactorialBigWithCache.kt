@@ -23,7 +23,7 @@ class FactorialBigWithCache {
      *
      * @return returns the factorial of a number
      */
-    fun compute(number: Int) : BigInteger {
+    fun compute(number: Int): BigInteger {
         if (number <= 1) {
             return BigInteger.ONE
         }

@@ -12,7 +12,7 @@ class PalindromeAdvanced(private val text: String) {
      *
      * @return returns true if the string is a palindrome
      */
-    fun isYes() : Boolean {
+    fun isYes(): Boolean {
         if (text.length <= 1) {
             return true
         }

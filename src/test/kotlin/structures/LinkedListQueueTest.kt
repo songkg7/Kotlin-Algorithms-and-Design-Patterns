@@ -3,10 +3,9 @@ package structures
 import org.junit.Test
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeEach
-import java.lang.IllegalStateException
 
 class LinkedListQueueTest {
-    private val queue : Queue<Int> = Queue.LinkedListQueue()
+    private val queue: Queue<Int> = Queue.LinkedListQueue()
 
     @BeforeEach
     fun clear() = queue.clear()

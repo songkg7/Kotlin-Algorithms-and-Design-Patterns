@@ -9,8 +9,8 @@ package design_patterns
  */
 
 interface Adapter<T> {
-    fun getItem(position: Int) : T
-    fun getItemCount() : Int
+    fun getItem(position: Int): T
+    fun getItemCount(): Int
 }
 
 /**
@@ -29,7 +29,7 @@ class RecyclerView<T> {
      *
      * @return returns a list of elements to test
      */
-    fun draw() : List<T> {
+    fun draw(): List<T> {
         val items = mutableListOf<T>()
         val myAdapter = adapter
         if (myAdapter != null) {

@@ -11,7 +11,7 @@ package design_patterns
  */
 
 interface MyPrinter {
-    fun printedText() : String
+    fun printedText(): String
 }
 
 /**
@@ -19,7 +19,7 @@ interface MyPrinter {
  *
  */
 class HelloPrinter : MyPrinter {
-    override fun printedText() : String {
+    override fun printedText(): String {
         return "Hello"
     }
 }
@@ -29,7 +29,7 @@ class HelloPrinter : MyPrinter {
  *
  */
 class CommaPrinter(private val printer: MyPrinter) : MyPrinter {
-    override fun printedText() : String {
+    override fun printedText(): String {
         return "${printer.printedText()},"
     }
 }
@@ -39,7 +39,7 @@ class CommaPrinter(private val printer: MyPrinter) : MyPrinter {
  *
  */
 class SpacePrinter(private val printer: MyPrinter) : MyPrinter {
-    override fun printedText() : String {
+    override fun printedText(): String {
         return "${printer.printedText()} "
     }
 }
@@ -49,7 +49,7 @@ class SpacePrinter(private val printer: MyPrinter) : MyPrinter {
  *
  */
 class WorldPrinter(private val printer: MyPrinter) : MyPrinter {
-    override fun printedText() : String {
+    override fun printedText(): String {
         return "${printer.printedText()}World"
     }
 }
@@ -59,7 +59,7 @@ class WorldPrinter(private val printer: MyPrinter) : MyPrinter {
  *
  */
 class ExclamationPrinter(private val printer: MyPrinter) : MyPrinter {
-    override fun printedText() : String {
+    override fun printedText(): String {
         return "${printer.printedText()}!"
     }
 }

@@ -64,7 +64,7 @@ class SingleLinkedList<T>(
      *
      * @return returns Kotlin a list of elements
      */
-    fun toList() : List<T> {
+    fun toList(): List<T> {
         if (first == null) return listOf()
 
         val list = mutableListOf<T>()
@@ -83,7 +83,7 @@ class SingleLinkedList<T>(
      *
      * @return returns true if the value exists in the list
      */
-    fun contains(value: T) : Boolean {
+    fun contains(value: T): Boolean {
         if (first == null) return false
 
         var node = first
@@ -110,7 +110,7 @@ class SingleLinkedList<T>(
      *
      * @return returns true if the element was successfully removed
      */
-    fun remove(value: T) : Boolean {
+    fun remove(value: T): Boolean {
         if (first == null) {
             return false
         }
@@ -143,7 +143,7 @@ class SingleLinkedList<T>(
      *
      * @return returns true if the element was successfully added at the specified index
      */
-    fun add(index: Int, value: T) : Boolean {
+    fun add(index: Int, value: T): Boolean {
 
         if (first == null) return false
 

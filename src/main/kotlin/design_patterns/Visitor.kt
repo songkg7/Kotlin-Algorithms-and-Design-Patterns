@@ -9,15 +9,15 @@ package design_patterns
  */
 
 interface PonyVisitor {
-    fun visitPonies(vararg ponies: LittlePony) : String
-    fun visitEarthPony(pony: EarthPony) : String
-    fun visitUnicorn(pony: Unicorn) : String
-    fun visitPegasus(pony: Pegasus) : String
+    fun visitPonies(vararg ponies: LittlePony): String
+    fun visitEarthPony(pony: EarthPony): String
+    fun visitUnicorn(pony: Unicorn): String
+    fun visitPegasus(pony: Pegasus): String
 }
 
 class JsonVisitor : PonyVisitor {
 
-    override fun visitPonies(vararg ponies: LittlePony) : String {
+    override fun visitPonies(vararg ponies: LittlePony): String {
         val poniesString = ponies.joinToString(",\n") { pony -> pony.accept(this) }
         return "[$poniesString]"
     }
@@ -56,7 +56,7 @@ class JsonVisitor : PonyVisitor {
 
 class XmlVisitor : PonyVisitor {
 
-    override fun visitPonies(vararg ponies: LittlePony) : String {
+    override fun visitPonies(vararg ponies: LittlePony): String {
         val poniesString = ponies.joinToString("\n") { pony -> pony.accept(this) }
         return "<ponies>\n$poniesString\n</ponies>"
     }
@@ -98,7 +98,7 @@ abstract class LittlePony(private val name: String, private val cutieMark: Strin
     fun name() = name
     fun cutie() = cutieMark
 
-    abstract fun accept(visitor: PonyVisitor) : String
+    abstract fun accept(visitor: PonyVisitor): String
 }
 
 class EarthPony(name: String, cutieMark: String) : LittlePony(name, cutieMark) {

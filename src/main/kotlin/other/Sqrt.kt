@@ -14,7 +14,7 @@ class Sqrt {
      * @number - number
      * @return returns the root of a number
      */
-    fun compute(number: Double) : Double {
+    fun compute(number: Double): Double {
         var value = number / 2
         for (i in 1..100) {
             value = (value + number / value) / 2

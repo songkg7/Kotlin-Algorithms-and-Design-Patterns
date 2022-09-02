@@ -1,7 +1,7 @@
 package design_patterns
 
 import org.junit.Test
-import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Assertions.assertEquals
 
 internal class AdapterTest {
 
@@ -9,7 +9,7 @@ internal class AdapterTest {
     fun test() {
         val list = RecyclerView<Int>()
         val items = listOf(1, 2, 3)
-        list.changeAdapter(object: Adapter<Int> {
+        list.changeAdapter(object : Adapter<Int> {
             override fun getItem(position: Int) = items[position]
             override fun getItemCount() = items.size
         })
